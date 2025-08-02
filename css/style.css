@@ -23,7 +23,7 @@ body {
 }
 
 header, main, footer {
-  position: relative; /* чтобы z-index работал */
+  position: relative;
   z-index: 1;
 }
 
@@ -228,4 +228,167 @@ header, main, footer {
 .article-card__content-datetime {
     font-size: 12px;
     color: rgba(134, 134, 134, 1);
+}
+
+
+.wrapper-paginate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px;
+    margin-bottom: 96px;
+}
+
+
+.wrapper-paginate__button-link {
+    background-color: rgba(53, 179, 169, 1);
+    padding: 12px 72px 12px 72px;
+    color: rgba(255, 255, 255, 1);
+    max-width: 182px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    font-style: Bold;
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    background-color: rgba(41, 99, 163, 1);
+    max-height: 302px;
+    max-width: 100%;
+    flex-direction: column;
+}
+
+.wrapper-bottom {
+    display: flex;
+    width: 1440px;
+    margin: 0px auto;
+    flex-direction: column;
+    margin-bottom: 17px;
+}
+
+
+.footer-nav {
+    margin-bottom: 24px;
+}
+
+.footer__top-nav {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 120px 0px 120px;
+    gap: 91.5px;
+    border-bottom: 1px solid rgba(157, 157, 157, 0.3);
+}
+
+.footer-nav__list {
+    display: flex;
+    gap: 93px
+}
+
+.footer-nav__item {
+    display: inline-flex;
+    gap: 21px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer-nav__item > a {
+    text-decoration: none;
+}
+
+.footer-nav--link {
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer-email {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-email__text {
+    max-width: 356px;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer-email__input {
+  display: flex;
+  align-items: center;
+}
+
+.footer-email__input > input {
+  height: 46px;
+  border-radius: 4px 0 0 4px; /* скругление только слева */
+  border: 1px solid rgba(157, 157, 157, 0.2);
+  width: 325px;
+  padding-left: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(157, 157, 157, 1);
+  outline: none;
+  border-right: none; /* убираем правую границу для стыка с кнопкой */
+}
+
+.footer-email__input > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 20px;
+  height: 48px;
+  background-color: rgba(22, 200, 187, 1);
+  border-radius: 0 4px 4px 0; /* скругление только справа */
+  border: 1px solid rgba(157, 157, 157, 0.2);
+  border-left: none; /* убираем левую границу */
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+}
+
+
+.footer-email__confirm {
+    color:rgba(255, 255, 255, 1);
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.5;
+    max-width: 486px;
+    text-align: justify;
+    text-align-last: left;
+}
+
+
+.footer-social__web {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-social__part > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-social__icon-web {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.footer__bottom-nav {
+    display: flex;
+    margin: 16px 120px 0px 120px;
+    flex-direction: row;
+    gap: 48px;
+}
+.footer__bottom-nav > a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
 }
