@@ -28,49 +28,54 @@ header, main, footer {
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(239, 242, 242, 1);
-    max-width: 1440px;
-    margin: auto;
 }
 
-.header--left {
+.container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+
+.wrapper-header {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    margin-left: 120px;
-    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: center;
+}
+.header__left {
+    display: flex;
+    justify-content: space-between;
+    margin: 14px 0px 14px 120px;
     box-shadow: none;
+    gap: 32px;
+    align-items: center;
+    line-height: 1.14;
+    letter-spacing: 0.25px;
 }
-
-
-.header__nav {
-    display: inline;
-}
-
 
 .header__menu-item {
+    display: flex;
+    gap: 16px;
     list-style: none;
 }
 
-.header__nav a {
-    margin-left: 30px;
+.header__nav > a {
     text-decoration: none;
 }
 
 
-.header--right {
+.header__right {
     display: flex;
-    margin-top: 14px;
-    margin-right: 120px;
-    margin-bottom: 14px;
+    margin: 14px 120px 14px 0px;
     box-shadow: none;
 }
 
-.header--right .button-link {
+.header__right .button-link {
     background-color: rgba(227, 245, 245, 1);
     padding: 14px 20px 14px 20px;
     border-radius: 4px;
@@ -82,22 +87,13 @@ header, main, footer {
     text-decoration: none;
 }
 
-.main-content {
-    margin: auto;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-
-}
-
 .wrapper-top {
     display: flex;
-    margin-top: 16px;
     flex-direction: column;
-    gap: 31px;
     justify-content: center;
+    gap: 31px;
+    margin: 16px 120px 0px 120px;
 }
-
 
 .wrapper-top__title {
     font-size: 48px;
@@ -117,30 +113,31 @@ header, main, footer {
     text-decoration: none;
 }
 
+.categories__list {
+    display: flex;
+    gap: 8px;
+}
 
 .category__item {
     display: flex;
-    gap: 16px;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
-}
-
-.category__item--link {
-    display: inline-flex;    
-    align-items: center; 
-    gap: 8px;
-    text-decoration: none;
-    font-size: 14px;
-    color: inherit;
     padding: 6px 8px 6px 8px;
     border: 1px solid rgba(193, 197, 205, 1);
     border-radius: 24px;
-}
-.category__link img {
-    display: block; 
-    height: 20px; 
-    width: auto;
+    line-height: 20px;
 }
 
+.category__item-link {
+    display: inline-flex;
+    font-weight: 600;
+    align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: inherit;
+    gap:4px;
+}
 
 .wrapper-content {
     display: flex;
@@ -262,7 +259,6 @@ header, main, footer {
 
 .wrapper-bottom {
     display: flex;
-    width: 1440px;
     margin: 0px auto;
     flex-direction: column;
     margin-bottom: 17px;
@@ -322,31 +318,31 @@ header, main, footer {
 }
 
 .footer-email__input > input {
-  height: 46px;
-  border-radius: 4px 0 0 4px; /* скругление только слева */
-  border: 1px solid rgba(157, 157, 157, 0.2);
-  width: 325px;
-  padding-left: 16px;
-  font-size: 14px;
-  font-weight: 400;
-  color: rgba(157, 157, 157, 1);
-  outline: none;
-  border-right: none; /* убираем правую границу для стыка с кнопкой */
+    height: 46px;
+    border-radius: 4px 0 0 4px; /* скругление только слева */
+    border: 1px solid rgba(157, 157, 157, 0.2);
+    width: 325px;
+    padding-left: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(157, 157, 157, 1);
+    outline: none;
+    border-right: none; /* убираем правую границу для стыка с кнопкой */
 }
 
 .footer-email__input > button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 14px 20px;
-  height: 48px;
-  background-color: rgba(22, 200, 187, 1);
-  border-radius: 0 4px 4px 0; /* скругление только справа */
-  border: 1px solid rgba(157, 157, 157, 0.2);
-  border-left: none; /* убираем левую границу */
-  cursor: pointer;
-  font-size: 14px;
-  color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 20px;
+    height: 48px;
+    background-color: rgba(22, 200, 187, 1);
+    border-radius: 0 4px 4px 0; /* скругление только справа */
+    border: 1px solid rgba(157, 157, 157, 0.2);
+    border-left: none; /* убираем левую границу */
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
 }
 
 
@@ -392,3 +388,47 @@ header, main, footer {
     font-weight: 400;
     text-decoration: none;
 }
+
+
+/* @media (max-width: 1024px) {
+  /* планшеты */
+/* .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(239, 242, 242, 1);
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.header--left {
+    margin-left: 32px;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.header__nav a {
+    text-decoration: none;
+    letter-spacing: 0.25px;
+    line-height: 1.14;
+}
+
+.header--right {
+    margin-right: 32px;
+    box-shadow: none;
+}
+
+.header--right .button-link {
+    background-color: rgba(227, 245, 245, 1);
+    padding: 14px 20px 14px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color:rgba(3, 178, 165, 1);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 20px;
+} */
+/* } */
