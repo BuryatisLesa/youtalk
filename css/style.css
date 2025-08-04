@@ -74,6 +74,12 @@ header, main, footer {
     display: flex;
     margin: 14px 120px 14px 0px;
     box-shadow: none;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-burger {
+    display: none;
 }
 
 .header__right .button-link {
@@ -181,7 +187,7 @@ header, main, footer {
 }
 
 .article-card__category {
-    display: inline-block;
+    display: flex;
     text-decoration: none;
     color: inherit;
     padding: 6px 8px 6px 8px;
@@ -192,6 +198,10 @@ header, main, footer {
     margin-bottom: 8px;
     font-size: 14px;
     font-weight: 600;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 1px;
 }
 
 
@@ -295,7 +305,7 @@ header, main, footer {
     text-decoration: none;
 }
 
-.footer-nav--link {
+.footer-nav-link {
     color: rgba(255, 255, 255, 1);
     font-size: 16px;
     font-weight: 700;
@@ -415,6 +425,10 @@ header, main, footer {
     box-shadow: none;
 }
 
+.menu-burgger {
+    display: none;
+}
+
 .wrapper-top {
     margin-left: 32px;
     margin-right: 32px;
@@ -453,5 +467,160 @@ header, main, footer {
 
 .footer-email__input > input {
     max-width: 270px;
+}
+}
+
+
+
+
+@media (max-width: 768px) {
+  /* планшеты */
+.menu-burger {
+    display: block;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Иконка бургера */
+.burger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1100; /* выше меню */
+}
+
+.burger-icon span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: rgba(3, 178, 165, 1);
+}
+
+/* Скрываем чекбокс */
+.burger-toggle {
+  display: none;
+}
+
+/* Меню по умолчанию скрыто */
+.nav-burger-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 9999;
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-width: 200px;
+}
+
+/* Показываем меню при активации чекбокса */
+.burger-toggle:checked + .burger-icon + .nav-burger-menu {
+    display: block;
+}
+
+.header {
+    position: relative;
+    z-index: 1000;
+}
+
+.header__menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__menu-list li {
+    margin-bottom: 10px;
+}
+
+.burger-header__link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+}
+
+
+.container {
+    max-width: 768px;
+    padding: 0px;
+}
+
+.wrapper-header {
+    gap: 20px;
+}
+
+.header__left {
+    margin: 14px 0px 14px 20px;
+    gap: 16px;
+}
+
+.header__right {
+    display: flex;
+    margin: 14px 20px 14px 0px;
+    box-shadow: none;
+}
+
+
+.button-link {
+    display: none;
+}
+
+.header__right .burger-button-link {
+    background-color: rgba(227, 245, 245, 1);
+    padding: 14px 20px 14px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color:rgba(3, 178, 165, 1);
+    font-size: 8px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header__nav {
+    display: none;
+}
+
+.wrapper-top {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.wrapper-content__article-card:nth-child(1), .wrapper-content__article-card:nth-child(2) {
+    max-width: 728px;
+    max-height: 500px;
+}
+
+.wrapper-content__article-card {
+    max-width: 352px;
+}
+
+.article-card__view {
+  position: relative;
+  max-width: 728px;
+  max-height: 500px;
+}
+
+.article-card__content-image {
+  width: 100%;
+}
+
+.footer__top-nav {
+  flex-wrap: wrap;
+  margin: 35px 20px 0px 20px;
+  gap: 31px;
+}
+
+.footer-email{
+    flex: 1;
+}
+
+.footer-social__web {
+    margin-bottom: 27px;
 }
 }

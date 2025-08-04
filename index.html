@@ -54,6 +54,29 @@
                 </div>
                 <div class="header__right">
                     <a href="/" class="button-link">Подобрать психолога</a>
+                    <div class="menu-burger" >
+                        <!-- Бургер-переключатель -->
+                        <input type="checkbox" id="burger-toggle" class="burger-toggle" />
+                        <label for="burger-toggle" class="burger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+
+                        <!-- Меню -->
+                        <nav class="nav-burger-menu">
+                        <ul class="header__menu-list">
+                            <li><a class="burger-header__link" href="#">О нас</a></li>
+                            <li><a class="burger-header__link" href="#">Тарифы</a></li>
+                            <li><a class="burger-header__link" href="#">Для бизнеса</a></li>
+                            <li><a class="burger-header__link" href="#">Психологам</a></li>
+                            <li><a class="burger-header__link" href="#">Сертификат</a></li>
+                            <li><a class="burger-header__link" href="#">Материалы</a></li>
+                            <li><a class="burger-header__link" href="#">FAQ</a></li>
+                            <li><a class="burger-button-link" href="#">Подобрать психолога</a></li>
+                        </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,13 +141,13 @@
                         <ul class="article-card__categories">
                             <li class="article-card__category">
                                 <img src="media\image\Type=Unicorn.png">
-                                <a class="article-card__category--link">
+                                <a class="article-card__category-link">
                                     Самооценка и самопринятие
                                 </a>
                             </li>
                             <li class="article-card__category">
                                 <img src="media\image\Type=Unicorn.png">
-                                <a class="article-card__category--link">Self</a>
+                                <a class="article-card__category-link">Self</a>
                             </li>
                         </ul>
                         <img class="article-card__content-image" src="media\image\article_1.png">
@@ -145,7 +168,7 @@
                         <ul class="article-card__categories">
                             <li class="article-card__category">
                                 <img src="media\image\Type=Unicorn.png">
-                                <a class="article-card__category--link">Self</a>
+                                <a class="article-card__category-link">Self</a>
                             </li>
                         </ul>
                         <img class="article-card__content-image"  src="media\image\article_2.png">
@@ -166,12 +189,12 @@
                         <ul class="article-card__categories">
                             <li class="article-card__category">
                                 <img src="media\image\Type=Unicorn.png">
-                                <a class="article-card__category--link">
+                                <a class="article-card__category-link">
                                     Самооценка и самопринятие
                                 </a>
                             </li>
                             <li class="article-card__category">
-                                <a class="article-card__category--link"><img src="media\image\Type=Unicorn.png">Психология питания</a>
+                                <a class="article-card__category-link"><img src="media\image\Type=Unicorn.png">Психология питания</a>
                             </li>
                         </ul>
                         <img class="article-card__content-image"  src="media\image\article_3.png">
@@ -192,7 +215,7 @@
                         <ul class="article-card__categories">
                             <li class="article-card__category">
                                 <img src="media\image\Type=Unicorn.png">
-                                <a class="article-card__category--link">Self</a>
+                                <a class="article-card__category-link">Self</a>
                             </li>
                         </ul>
                         <img class="article-card__content-image"  src="media\image\article_4.png">
@@ -213,7 +236,7 @@
                         <ul class="article-card__categories">
                             <li class="article-card__category">
                                 <img src="media\image\Type=Unicorn.png">
-                                <a class="article-card__category--link">Self</a>
+                                <a class="article-card__category-link">Self</a>
                             </li>
                         </ul>
                         <img class="article-card__content-image"  src="media\image\article_5.png">
@@ -234,7 +257,7 @@
                         <ul class="article-card__categories">
                             <li class="article-card__category">
                                 <img src="media\image\Type=Unicorn.png">
-                                <a class="article-card__category--link">Self</a>
+                                <a class="article-card__category-link">Self</a>
                             </li>
                         </ul>
                         <img class="article-card__content-image"  src="media\image\article_6.png">
@@ -255,7 +278,7 @@
                         <ul class="article-card__categories">
                             <li class="article-card__category">
                                 <img src="media\image\Type=Unicorn.png">
-                                <a class="article-card__category--link">Self</a>
+                                <a class="article-card__category-link">Self</a>
                             </li>
                         </ul>
                         <img class="article-card__content-image"  src="media\image\article_7.png">
@@ -276,7 +299,7 @@
                         <ul class="article-card__categories">
                             <li class="article-card__category">
                                 <img src="media\image\Type=Unicorn.png">
-                                <a class="article-card__category--link">Self</a>
+                                <a class="article-card__category-link">Self</a>
                             </li>
                         </ul>
                         <img class="article-card__content-image"  src="media\image\article_8.png">
@@ -305,18 +328,18 @@
                     <nav class="footer-nav">
                         <ul class="footer-nav__list">
                             <li class="footer-nav__item self">
-                                <a href="/" class="footer-nav--link">О нас</a>
-                                <a href="/" class="footer-nav--link">Тарифы</a>
-                                <a href="/" class="footer-nav--link">Для бизнеса</a>
-                                <a href="/" class="footer-nav--link">Психологам</a>
-                                <a href="/" class="footer-nav--link">FAQ</a>
+                                <a href="/" class="footer-nav-link">О нас</a>
+                                <a href="/" class="footer-nav-link">Тарифы</a>
+                                <a href="/" class="footer-nav-link">Для бизнеса</a>
+                                <a href="/" class="footer-nav-link">Психологам</a>
+                                <a href="/" class="footer-nav-link">FAQ</a>
                             </li>
                             <li class="footer-nav__item other">
-                                <a href="/" class="footer-nav--link">Блог</a>
-                                <a href="/" class="footer-nav--link">Вебинары</a>
-                                <a href="/" class="footer-nav--link">Подкаст</a>
-                                <a href="/" class="footer-nav--link">Сертификат</a>
-                                <a href="/" class="footer-nav--link">Контакты</a>
+                                <a href="/" class="footer-nav-link">Блог</a>
+                                <a href="/" class="footer-nav-link">Вебинары</a>
+                                <a href="/" class="footer-nav-link">Подкаст</a>
+                                <a href="/" class="footer-nav-link">Сертификат</a>
+                                <a href="/" class="footer-nav-link">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -338,7 +361,7 @@
                     </div>
                     <div class="footer-social__web">
                         <div class="footer-social__part">
-                            <a class="footer-social--link" href="/">
+                            <a class="footer-social-link" href="/">
                                 <svg width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M83.2307 23.751C86.2668 19.2628 87.1299 15.3838 85.7388 13.9927C85.3022 13.5662 84.6421 13.3428 83.779 13.3428C81.8801 13.3428 79.0775 14.409 75.9805 16.5008C77.2701 17.4959 78.5597 18.623 79.829 19.8923C81.0983 21.1616 82.2355 22.4512 83.2205 23.7408L83.2307 23.751Z" fill="white"/>
                                     <path d="M69.646 19.9021C70.9152 18.6328 72.2049 17.4955 73.4945 16.5105C70.3974 14.4187 67.5948 13.3525 65.6959 13.3525C64.8429 13.3525 64.1728 13.5658 63.7361 14.0024C62.345 15.3936 63.2081 19.2624 66.2442 23.7607C67.2394 22.4711 68.3767 21.1815 69.6358 19.9122L69.646 19.9021Z" fill="white"/>
@@ -361,7 +384,7 @@
                             </a>
                         </div>
                         <div class="footer-social__icon-web">
-                            <a class="footer-social--link" href="/">
+                            <a class="footer-social-link" href="/">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_4492_2039)">
                                     <rect width="32" height="32" rx="16" fill="#EFF5FB"/>
@@ -379,7 +402,7 @@
                                     </defs>
                                 </svg>
                             </a>
-                            <a class="footer-social--link" href="/">
+                            <a class="footer-social-link" href="/">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_4492_2043)">
                                     <rect width="32" height="32" rx="16" fill="#EFF5FB"/>
@@ -397,7 +420,7 @@
                                     </defs>
                                 </svg>
                             </a>
-                            <a class="footer-social--link" href="/">
+                            <a class="footer-social-link" href="/">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_4492_2047)">
                                     <rect width="32" height="32" rx="16" fill="#EFF5FB"/>
@@ -415,7 +438,7 @@
                                     </defs>
                                 </svg>
                             </a>
-                            <a class="footer-social--link" href="/">
+                            <a class="footer-social-link" href="/">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_4492_2052)">
                                     <path d="M0 16C0 7.16343 7.16343 0 16 0C24.8366 0 32 7.16343 32 16C32 24.8366 24.8366 32 16 32C7.16343 32 0 24.8366 0 16Z" fill="#333333"/>
@@ -432,9 +455,9 @@
                     </div>
                 </div>
                 <div class="footer__bottom-nav">
-                    <a href="/" class="footer__bottom-nav--link">©Youtalk, 2018 – 2022</a>
-                    <a href="/" class="footer__bottom-nav--link">Юридические документы</a>
-                    <a href="/" class="footer__bottom-nav--link">Способы оплаты</a>
+                    <a href="/" class="footer__bottom-nav-link">©Youtalk, 2018 – 2022</a>
+                    <a href="/" class="footer__bottom-nav-link">Юридические документы</a>
+                    <a href="/" class="footer__bottom-nav-link">Способы оплаты</a>
                 </div>
             </div>
         </footer>
