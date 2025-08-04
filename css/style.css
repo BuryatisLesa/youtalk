@@ -47,6 +47,7 @@ header, main, footer {
     flex-direction: row;
     align-items: center;
 }
+
 .header__left {
     display: flex;
     justify-content: space-between;
@@ -190,6 +191,7 @@ header, main, footer {
     background-color: rgba(255, 255, 255, 0.7);
     margin-bottom: 8px;
     font-size: 14px;
+    font-weight: 600;
 }
 
 
@@ -252,7 +254,7 @@ header, main, footer {
 .footer {
     display: flex;
     background-color: rgba(41, 99, 163, 1);
-    max-height: 302px;
+    max-height: 100%;
     max-width: 100%;
     flex-direction: column;
 }
@@ -390,45 +392,66 @@ header, main, footer {
 }
 
 
-/* @media (max-width: 1024px) {
+@media (max-width: 1024px) {
   /* планшеты */
-/* .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(239, 242, 242, 1);
+
+.container {
     max-width: 1024px;
-    margin: 0 auto;
+    padding: 0px;
 }
 
-.header--left {
+.wrapper-header {
+    gap: 20px;
+}
+
+.header__left {
+    margin: 14px 0px 14px 32px;
+    gap: 16px;
+}
+
+.header__right {
+    display: flex;
+    margin: 14px 32px 14px 0px;
+    box-shadow: none;
+}
+
+.wrapper-top {
     margin-left: 32px;
-    box-shadow: none;
-    font-size: 14px;
-}
-
-.header__nav a {
-    text-decoration: none;
-    letter-spacing: 0.25px;
-    line-height: 1.14;
-}
-
-.header--right {
     margin-right: 32px;
-    box-shadow: none;
 }
 
-.header--right .button-link {
-    background-color: rgba(227, 245, 245, 1);
-    padding: 14px 20px 14px 20px;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    color:rgba(3, 178, 165, 1);
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-    line-height: 20px;
-} */
-/* } */
+.categories__list {
+    flex-wrap: wrap;
+}
+
+.wrapper-content__article-card:nth-child(1), .wrapper-content__article-card:nth-child(2) {
+  max-width: 468px;
+  max-height: 500px;
+}
+
+
+.wrapper-content__article-card {
+    max-width: 304px;
+}
+
+.article-card__content {
+  margin: 16px 17px 16px 17px;
+}
+
+.footer-nav__item {
+  gap: 16px;
+}
+
+.footer__top-nav {
+  margin: 40px 38px 0px 38px;
+  gap: 21px;
+}
+
+.footer__bottom-nav {
+  margin: 16px 38px 0px 38px;
+}
+
+.footer-email__input > input {
+    max-width: 270px;
+}
+}
