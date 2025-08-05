@@ -55,8 +55,13 @@ header, main, footer {
     box-shadow: none;
     gap: 32px;
     align-items: center;
-    line-height: 1.14;
-    letter-spacing: 0.25px;
+
+}
+
+.header__menu {
+    display: flex;
+    flex-direction: row;
+    gap: 32px
 }
 
 .header__menu-item {
@@ -280,6 +285,24 @@ header, main, footer {
 
 .footer-nav {
     margin-bottom: 24px;
+    display: flex;
+    gap: 93px;
+    flex-shrink: 0;
+}
+
+.footer-nav__list-self, .footer-nav__list-other {
+    display: inline-flex;
+    gap: 21px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.footer-nav-link {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .footer__top-nav {
@@ -288,18 +311,6 @@ header, main, footer {
     margin: 40px 120px 0px 120px;
     gap: 91.5px;
     border-bottom: 1px solid rgba(157, 157, 157, 0.3);
-}
-
-.footer-nav__list {
-    display: flex;
-    gap: 93px
-}
-
-.footer-nav__item {
-    display: inline-flex;
-    gap: 21px;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .footer-nav__item > a {
@@ -417,6 +428,10 @@ header, main, footer {
 
 .header__left {
     margin: 14px 0px 14px 32px;
+    gap: 16px;
+}
+
+.header__menu {
     gap: 16px;
 }
 
