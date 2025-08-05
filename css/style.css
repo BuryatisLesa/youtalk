@@ -214,7 +214,8 @@ header, main, footer {
 .article-card__content-image {
     position: relative;
     z-index: 1;
-    border-radius: 16px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
     max-width: 100%; 
     height: auto;
 }
@@ -623,4 +624,76 @@ header, main, footer {
 .footer-social__web {
     margin-bottom: 27px;
 }
+}
+
+
+@media (max-width: 414px) {
+    /*iPhone 11 Pro Max - 2*/
+.container {
+    max-width: 414px;
+    padding: 0px;
+}
+
+.wrapper-top__categories {
+  overflow-x: auto;         /* включает горизонтальный скролл */
+  -webkit-overflow-scrolling: touch; /* плавная прокрутка на iOS */
+  scrollbar-width: none; /* Firefox */
+}
+
+.wrapper-top__categories::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.categories__list {
+  display: flex;
+  flex-wrap: nowrap;        /* важно: элементы не переносятся */
+  gap: 8px;                /* отступы между элементами */
+  list-style: none;
+}
+
+.category__item {
+  flex: 0 0 auto;           /* фиксирует ширину элемента */
+}
+
+.category__item-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  white-space: nowrap;     /* предотвращает перенос текста */
+}
+
+.wrapper-top__title {
+  font-size: 32px;
+}
+
+
+.wrapper-content__article-card {
+    max-width: 374px;
+    max-height: 466px;
+}
+
+.wrapper-content__article-card:nth-child(1), .wrapper-content__article-card:nth-child(2) {
+    max-width: 374px;
+    max-height: 462px;
+}
+
+.article-card__view {
+    max-width: 100%;
+    height: 206px;
+}
+
+.article-card__content-image {
+    height: 100%;
+}
+
+.footer-nav__list {
+  gap: 158px;
+}
+
+.footer__bottom-nav {
+  margin-left: 19.5px;
+  flex-direction: column;
+  gap: 24px;
+}
+
 }
