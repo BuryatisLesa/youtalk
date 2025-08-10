@@ -11,6 +11,42 @@ body {
     font-variation-settings:"wdth" 100;
 }
 
+.background-block {
+    position: absolute;
+    top: 5259px;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to top, rgba(239, 245, 251, 0), rgba(239, 245, 251, 1));
+    z-index: 0;
+    border-top-left-radius: 1000px 12px;
+    border-top-right-radius: 1000px 12px;
+}
+
+
+.background-circle__one {
+    position: absolute;
+    z-index: 0;
+    width: 686px;
+    height: 606px;
+    top: 2480px;
+    right: -468px;
+    background-image: url("../media/image/circle-1.svg");
+    background-repeat: no-repeat;
+}
+
+
+.background-circle__two{
+    position: absolute;
+    z-index: 0;
+    width: 272px;
+    height: 240px;
+    top: 4962px;
+    right: -200px;
+    background-image: url("../media/image/circel-2.svg");
+    background-repeat: no-repeat;
+
+}
+
 .wrapper-layout {
     max-width: 1440px;
     width: 1200px;
@@ -640,7 +676,6 @@ header, main, footer {
 
 .main-bottom__categories-list {
     display: flex;
-    margin: 0px 120px 0px 120px;
     align-items: center;
     color: rgba(41, 99, 163, 1);
     font-size: 14px;
@@ -661,6 +696,70 @@ header, main, footer {
     height: 1px;
     background-color:rgba(41, 99, 163, 1);
     border-radius: 50%;
+}
+
+.main-bottom__category:last-child::after {
+    content: none;
+} 
+
+.main-help {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 76px;
+    margin-bottom: 158px;
+}
+
+.main-help__left {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    max-width: 348px;
+}
+
+.main-help__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: rgba(51, 51, 51, 1);
+    margin-bottom: 24px;
+}
+
+
+.main-help__text {
+    font-size: 18px;
+    line-height: 26px;
+    color: rgba(51, 51, 51, 1);
+    margin-bottom: 32px;
+}
+
+.main-help__button-help {
+    padding: 20px 24px 20px 24px;
+    background-color: rgba(53, 179, 169, 1);
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(53, 179, 169, 1);
+    letter-spacing: 0%;
+}
+
+.main-help__right {
+    position: relative;
+    z-index: 0;
+    margin-left: 339px;
+}
+
+.main-help__image--oneObject {
+    position: absolute;
+    z-index: 2;
+}
+
+.main-help__image--twoObject {
+    position: absolute;
+    z-index: 1;
+    top: 27px;
 }
 
 
