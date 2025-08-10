@@ -13,7 +13,7 @@ body {
 
 .background-block {
     position: absolute;
-    top: 5259px;
+    top: 5432px;
     width: 100%;
     height: 300px;
     background: linear-gradient(to top, rgba(239, 245, 251, 0), rgba(239, 245, 251, 1));
@@ -45,6 +45,11 @@ body {
     background-image: url("../media/image/circel-2.svg");
     background-repeat: no-repeat;
 
+}
+
+header, main, .main-help, footer {
+  position: relative;
+  z-index: 1;
 }
 
 .wrapper-layout {
@@ -82,7 +87,7 @@ aside {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 234px;
+    width: 234px;
     max-height: 512px;
     padding: 23px;
     border-radius: 16px;
@@ -474,6 +479,24 @@ header, main, footer {
     border-radius: 50%;
 }
 
+.wrapper-top__datetime::after {
+    display: none;
+    content: "";
+    width: 1px;
+    height: 1px;
+    background-color: #494949;
+    margin-left: 8px;
+    margin-bottom: 4px;
+    border-radius: 50%;
+}
+
+.wrapper-top__category {
+    display: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(41, 99, 163, 1);
+}
+
 .wrapper-top__tabel-content {
     font-weight: 500;
     font-size: 16px;
@@ -602,21 +625,30 @@ header, main, footer {
     font-size: 14px;
 }
 
-.mission-text-wrapper {
+.mission-text__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 485px;
-    margin-left: 102px;
+    position: relative;
+    z-index: 0;
+    padding: 48px 102px 48px 102px;
+}
+
+.mission-text__image {
+    position: absolute;
+    z-index: 1;
 }
 
 
 .article-content__mission-text {
+    position: relative;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
     color: rgba(51, 51, 51, 1);
     font-style: italic;
+    z-index: 2;
 }
 
 .article-content__block-it {
@@ -944,6 +976,34 @@ header, main, footer {
     gap: 20px;
 }
 
+.background-circle__one, .background-circle__two {
+    display: none;
+}
+.wrapper-layout {
+    width: 960px;
+    grid-template-columns: 690px 222px;
+    gap: 24px;
+}
+
+.wrapper-top__category {
+    display: block;
+}
+
+.wrapper-top__datetime::after{
+    display: inline-block;
+}
+.main-bottom {
+    display: none;
+}
+
+.main-help {
+    display: none;
+}
+
+.background-block {
+    display: none;
+}
+
 .header__left {
     margin: 14px 0px 14px 32px;
     gap: 16px;
@@ -1015,6 +1075,49 @@ header, main, footer {
   z-index: 1000;
 }
 
+
+.wrapper-layout {
+  width: 728px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.wrapper-aside {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 59px;
+}
+
+.article-content {
+    margin-bottom: 0px;
+}
+
+
+.block-help__card {
+  flex: 1 1 calc(50% - 8px);
+  min-width: 0;
+  box-sizing: border-box;
+
+}
+.promo-card {
+  flex: 1 1 calc(50% - 8px);
+  min-width: 0;
+  box-sizing: border-box;
+  height: 242px;
+}
+
+.promo-card__button {
+    position: absolute;
+    z-index: 10;
+    top: 190px;
+  }
+
+}
 /* Иконка бургера */
 .burger-icon {
   display: flex;
@@ -1157,7 +1260,6 @@ header, main, footer {
 .footer-social__web {
     margin-bottom: 27px;
 }
-}
 
 
 @media (max-width: 414px) {
@@ -1166,6 +1268,13 @@ header, main, footer {
     max-width: 414px;
     padding: 0px;
 }
+
+.wrapper-layout {
+  width: 354px;
+  display: flex;
+  flex-direction: column;
+}
+
 
 .wrapper-top__categories {
   overflow-x: auto;         /* включает горизонтальный скролл */
