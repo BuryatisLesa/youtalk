@@ -56,9 +56,9 @@ header, main, footer {
 
 
 .container {
-    max-width: 1440px;
+    max-width: 1200px;
     width: 100%;
-    padding: 0 16px;
+    padding: 0px;
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -73,7 +73,7 @@ header, main, footer {
 .header__left {
     display: flex;
     justify-content: space-between;
-    margin: 14px 0px 14px 120px;
+    margin: 14px 0px 14px 0px;
     box-shadow: none;
     gap: 32px;
     align-items: center;
@@ -100,7 +100,7 @@ header, main, footer {
 
 .header__right {
     display: flex;
-    margin: 14px 120px 14px 0px;
+    margin: 14px 0px 14px 0px;
     box-shadow: none;
     position: relative;
     z-index: 1;
@@ -127,7 +127,7 @@ header, main, footer {
     flex-direction: column;
     justify-content: center;
     gap: 31px;
-    margin: 16px 120px 0px 120px;
+    margin: 16px 0px 0px 0px;
 }
 
 .wrapper-top__title > h1{
@@ -172,7 +172,7 @@ header, main, footer {
 }
 
 .article-content {
-    margin: 0px 120px 0px 120px;
+    margin: 0px;
 }
 .categories__list {
     display: flex;
@@ -199,6 +199,10 @@ header, main, footer {
     font-size: 14px;
     color: inherit;
     gap:4px;
+}
+
+.category__item--active {
+    border: 2px solid  rgba(22, 200, 187, 1);
 }
 
 .wrapper-content {
@@ -330,6 +334,7 @@ header, main, footer {
     margin: 0px auto;
     flex-direction: column;
     margin-bottom: 17px;
+    margin-top: 40px;
 }
 
 
@@ -350,27 +355,23 @@ header, main, footer {
 }
 
 
-.footer-nav-link {
+.footer-nav__link {
     display: flex;
     flex-wrap: nowrap;
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .footer__top-nav {
     display: flex;
     flex-direction: row;
-    margin: 40px 120px 0px 120px;
     gap: 91.5px;
     border-bottom: 1px solid rgba(157, 157, 157, 0.3);
 }
 
 .footer-nav__item > a {
     text-decoration: none;
-}
-
-.footer-nav-link {
-    color: rgba(255, 255, 255, 1);
-    font-size: 16px;
-    font-weight: 700;
 }
 
 .footer-email {
@@ -452,7 +453,7 @@ header, main, footer {
 
 .footer__bottom-nav {
     display: flex;
-    margin: 16px 120px 0px 120px;
+    margin: 16px 0px 0px 0px;
     flex-direction: row;
     gap: 48px;
 }
